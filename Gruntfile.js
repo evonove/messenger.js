@@ -1,23 +1,29 @@
 /*global module:false*/
 module.exports = function(grunt) {
 
-  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+  // Load all plugins
+  require('load-grunt-tasks')(grunt);
 
   // Project configuration.
   grunt.initConfig({
     concat: {
       dist: {
         src: ['lib/{,*/}*.js'],
-        dest: 'dist/<%= pkg.name %>.v<%= pkg.version %>.js'
+        dest: 'dist/messenger.js'
       }
     },
     uglify: {
       options: {
-        banner: '<%= banner %>'
+        report: 'gzip'
       },
       dist: {
         src: '<%= concat.dist.dest %>',
-        dest: 'dist/<%= pkg.name %>.v<%= pkg.version %>.min.js'
+        dest: 'dist/messenger.min.js'
+      }
+    },
+    clean: {
+      dist: {
+        src: ['dist/']
       }
     },
     jshint: {
@@ -29,7 +35,7 @@ module.exports = function(grunt) {
     mochaTest: {
       test: {
         options: {
-          reporter: 'nyan'
+          reporter: 'spec'
         },
         src: ['test/*.js']
       }
@@ -46,12 +52,12 @@ module.exports = function(grunt) {
     }
   });
 
-  // Default task
-  grunt.registerTask('build', ['mochaTest', 'concat', 'uglify']);
+  // Build task
+  grunt.registerTask('build', ['jshint', 'clean:dist', 'mochaTest', 'concat', 'uglify']);
 
   // Specific tasks
   grunt.registerTask('test', ['mochaTest']);
 
-  // Build
+  // Default
   grunt.registerTask('default', ['jshint', 'mochaTest']);
 };
