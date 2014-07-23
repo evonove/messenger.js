@@ -1,0 +1,36 @@
+{
+  "name": "messenger.js",
+  "version": "0.0.0",
+  "description": "Simple implementation (but stable) pub/sub messaging pattern for Javascript",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "grunt build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/evonove/messenger.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/evonove/messenger.js/issues"
+  },
+  "keywords": [
+    "channel",
+    "messaging",
+    "pub-sub",
+    "publisher",
+    "subscriber"
+  ],
+  "author": "Emanuele Palazzetti <emanuele.palazzetti@gmail.com>",
+  "homepage": "https://github.com/evonove/messenger.js",
+  "license": "BSD",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint" : "~0.6.0",
+    "grunt-contrib-uglify" : "~0.2.2",
+    "grunt-contrib-concat" : "~0.3.0",
+    "grunt-contrib-watch"  : "~0.4.4",
+    "matchdep"             : "~0.1.2",
+    "grunt-mocha-test" : "~0.7.0"
+  }
+}

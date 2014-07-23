@@ -1,0 +1,27 @@
+{
+  "name": "messenger.js",
+  "version": "0.0.0",
+  "homepage": "https://github.com/evonove/messenger.js",
+  "authors": [
+    "Emanuele Palazzetti <emanuele.palazzetti@gmail.com>"
+  ],
+  "description": "Simple implementation (but stable) pub/sub messaging pattern for Javascript",
+  "keywords": [
+    "channel",
+    "messaging",
+    "pub-sub",
+    "publisher",
+    "subscriber"
+  ],
+  "license": "BSD",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {},
+  "devDependencies": {}
+}
+
