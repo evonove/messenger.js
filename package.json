@@ -4,8 +4,12 @@
   "description": "Simple implementation (but stable) pub/sub messaging pattern for Javascript",
   "main": "Gruntfile.js",
   "scripts": {
-    "test": "grunt build"
+    "test": "grunt"
   },
+  "files": [
+    "dist/messenger.js",
+    "dist/messenger.min.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/evonove/messenger.js.git"

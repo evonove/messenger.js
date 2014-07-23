@@ -13,6 +13,9 @@
     "publisher",
     "subscriber"
   ],
+  "main": [
+    "dist/messenger.js"
+  ],
   "license": "BSD",
   "ignore": [
     "**/.*",
